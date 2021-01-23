@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','News ' )
 
 @section('content')
     <div class="container mx-auto flex flex-wrap py-4">

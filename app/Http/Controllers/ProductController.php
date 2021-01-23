@@ -8,6 +8,7 @@ use App\Product;
 use App\Category;
 use DB;
 use Tcg\Voyager\Facades\Voyager;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class ProductController extends Controller
 {
@@ -52,21 +53,13 @@ class ProductController extends Controller
     {
         $product = Product::where('id', '=', $id)->firstOrFail();
         $categories = Category::whereNull('parent_id')->get();
-        $categoryId = request('category_id');
-        if($categoryId ){
-            $category = Category::find($product->category->id);
-            $categoryName = $category->name;
-            $products = $category->products;     
-        }else{
-            $categoryName ="";
-            $products = Product::take(10)->get();
-        }
-      
-      
+        $products = Product::take(10)->get();
        
       
-      
-      
+       $product_body = Markdown::convertToHtml($product->body);
+  
+       
+
         //file
         $new_file = json_decode($product->Instructions)[0];
         $new_file_path = Voyager::image($new_file->download_link);
@@ -77,7 +70,7 @@ class ProductController extends Controller
         $new_file_path2 = Voyager::image($new_file2->download_link);
         $new_file_name2 = $new_file2->original_name; //if you need original file name
 
-        return view('product.show',compact('categoryName','new_file_name2','product','products','categories','new_file_path','new_file_name','new_file_path2'));
+        return view('product.show',compact('product_body','new_file_name2','product','products','categories','new_file_path','new_file_name','new_file_path2'));
 
 
     }

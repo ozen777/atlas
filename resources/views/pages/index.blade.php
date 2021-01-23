@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('title','homePage')
+    
 
 @section('content')
  
@@ -9,13 +11,13 @@
         <img class="bg-cover bg-center" src="{{asset('storage/'.$image->image1)}}">
       </div>
       <div class="swiper-slide">
-        <img class="object-fill" src="/img/4.jpg">
+        <img class="object-fill" src="{{asset('storage/'.$image->image2)}}">
       </div>
       <div class="swiper-slide">
-        <img class="object-fill" src="/img/6.jpg">
+        <img class="object-fill" src="{{asset('storage/'.$image->image3)}}">
       </div>
       <div class="swiper-slide">
-        <img class="object-fill" src="/img/1.jpg">
+        <img class="object-fill" src="{{asset('storage/'.$image->image4)}}">
       </div>
     
     </div>

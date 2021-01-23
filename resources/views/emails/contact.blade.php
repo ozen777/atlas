@@ -23,6 +23,6 @@
                  </p>
                </div>
              
-             </div>
+            
  
 @endcomponent

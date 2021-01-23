@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','About us' )
 
 @section('content')
 <div class="w-full bg-cover bg-center mt-1" style="height:30rem; background-image: url(/img/1.jpg);">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','Products' )
 @section('content')
 
         <!-- component cards -->
@@ -17,7 +17,7 @@
             <!-- Article -->
             <article class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="{{ route('products',['category_id'=>$category->id]) }}">
+               <a href="{{ route('products',['category_id'=>$category->id]) }}">
                     <img alt="Placeholder" class="block h-80 w-full"  src="{{asset('storage/'.$category->image)}}">
                 </a>
 

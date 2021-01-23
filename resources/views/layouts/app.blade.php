@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     
-    <title>veroTest</title>
+    <title>@yield('title')</title>
 
     <style>
       
@@ -89,10 +89,10 @@
     <div class="flex-1 flex justify-between items-center">
       <a href="/">
         <img class="w-48"  src="/img/logo.png" >
-    </a>
+      </a>
   </div>
 
-   <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+  <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
   <input class="hidden" type="checkbox" id="menu-toggle" />
 
   <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
@@ -118,56 +118,72 @@
     <footer class="px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200">
       <div class="container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row">
           <div class="w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0 lg:text-left">
-              <a href="/"
-                  class="flex justify-start block text-left sm:text-center lg:text-left sm:justify-center lg:justify-start">
+              
+            <a href="/" class="flex justify-start block text-left sm:text-center lg:text-left sm:justify-center lg:justify-start">
                   <span class="flex items-start sm:items-center">
-                    <img src="/img/logo.png" alt="">
+                  <img src="/img/logo.png" alt="">
                   </span>
               </a>
-              <p class="mt-6 mr-4 text-base text-gray-500">some text.
-              </p>
+
+            <p class="mt-6 mr-4 text-base text-gray-500"></p>
+
           </div>
+
           <div class="block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0">
               <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
                   <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
-                      Home</li>
-                  <li><a href="#_"
-                          class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Products</a>
+                      Home
                   </li>
-                  <li><a href="#_"
-                          class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">News</a>
+                  <li>
+                    <a href="/products-category" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Products</a>
                   </li>
-                  <li><a href="#_"
-                    class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Abouts us</a>
+
+                  <li>
+                    <a href="/news" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">News</a>
+                  </li>
+
+                  <li>
+                    <a href="/aboutUs" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Abouts us</a>
             </li>
-            <li><a href="#_"
-              class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Contact us</a>
-      </li>
+
+            <li>
+              <a href="/contact" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Contact us</a>
+            </li>
                   
               </ul>
+
+
               <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
-                  <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
-                      Company</li>
-                  <li><a href="#_"
-                          class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Privacy</a>
+                  <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">  
+                     Company</li>
+                  <li>
+                    <a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Privacy</a>
                   </li>
-                  <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Terms
-                          of
-                          Service</a></li>
+
+                  <li>
+                    <a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">
+                      Terms of Service</a>
+                    </li>
               </ul>
 
               <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none mr-3">
                 <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
                     Products</li>
-                <li><a href="#_"
-                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Blood Grouping
-                        Reagents</a>
+                <li>
+                  <a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Blood Grouping
+                        Reagents
+                  </a>
                 </li>
-                <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Latex Agglutination
-                  Kits</a></li>
+                <li>
+                  <a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Latex Agglutination
+                  Kits
+                 </a>
+                </li>
 
-                  <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Febrile Antigen
-                    Reagents</a></li>
+                  <li>
+                    <a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Febrile Antigen
+                    Reagents</a>
+                  </li>
             </ul>
 
            

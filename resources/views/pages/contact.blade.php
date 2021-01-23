@@ -1,5 +1,5 @@
   @extends('layouts.app')
-
+  @section('title','Contact us' )
   @section('content')
 
   <div id="map"></div>
